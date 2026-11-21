@@ -1,32 +1,38 @@
 (proj9_menu
    (quickplay
       (band_quickplay qp_local qp_online)
-      (custom_modes theatre_info_button theatre autoplay)
       (tug_of_war
          local_multi_tow
          player_match_tow
          #ifdef HX_XBOX
          (ranked_match_tow easy medium hard expert)
-         #endif)
+         #endif
+      )
       (score_duel
          local_multi_scoreduel
          player_match_scoreduel
          #ifdef HX_XBOX
          (ranked_match_scoreduel easy medium hard expert)
          #endif
-         (friendly_scoreduel friendly_scoreduel_local friendly_scoreduel_online)))
+      )
+   )
    (story story_local story_online)
-   ((training popup)
+   (
+      (training popup)
       tutorials
       practice_mode
-      (drum_trainer drum_trainer_beats drum_trainer_ringo drum_trainer_freestyle))
-   ((options popup)
+      (drum_trainer drum_trainer_beats drum_trainer_ringo drum_trainer_freestyle)
+   )
+   (
+      (options popup)
       gameplay
       global_options
       av_settings
       options_managedata
-      calibration)
-   ((extras popup)
+      calibration
+   )
+   (
+      (extras popup)
       (leaderboards
          lb_solo
          lb_band
@@ -34,7 +40,8 @@
          #ifndef HX_PS3
          lb_tug_of_war
          lb_score_duel
-         #endif)
+         #endif
+      )
       accomplishments
       credits
       #ifdef HX_PS3
@@ -42,15 +49,7 @@
       #endif
       #ifdef HX_XBOX
       party_options
-      #endif)
-   (ultimenu
-      mod_info_button
-      overshell
-      (features #ifdef HX_WII force_username #endif unlock_bp go_to_frs))
-   #ifdef HX_WII
-   ((online_options popup)
-      check_invites
-      manage_friends
-      change_nickname)
-   #endif
-   ) ;dis made ps3 angy with it being in the ifdef
+      #endif
+   )
+   music_store
+)
